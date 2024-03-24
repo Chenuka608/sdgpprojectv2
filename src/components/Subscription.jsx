@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PaymentPortal from './PaymentPortal'; // Adjust the path as per your file structure
 import Single from '../images/standered.png';
 import Double from '../images/student.png';
@@ -6,6 +6,10 @@ import Triple from '../images/lite.png';
 
 const Subscription = () => {
   const [showPaymentForm, setShowPaymentForm] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top when the component mounts
+  }, []);
 
   const handleStartTrial = () => {
     setShowPaymentForm(true);
