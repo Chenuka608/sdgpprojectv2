@@ -94,11 +94,11 @@ const Login = () => {
             <form onSubmit={handleClick} className='max-w-[400px] w-full mx-auto bg-white p-4'>
                 <h2 className='text-4xl font-bold text-center py-6'>INTERNOVA.</h2>
                 <div className='flex flex-col py-2'>
-                    <label>Email</label>
+                    <label htmlFor="email">Email</label>
                     <input type="email" className='border p-2' required id="email" onChange={handleChange}/>
                 </div>
                 <div className='flex flex-col py-2'>
-                    <label>Password</label>
+                    <label htmlFor ="password" >Password</label>
                     <input type="password" className='border p-2' required id="password" onChange={handleChange}/>
                 </div>
                  {/* Displaying error message */}
