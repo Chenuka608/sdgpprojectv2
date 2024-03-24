@@ -8,6 +8,10 @@ const Questionnaire = () => {
       query: "",
       
     });
+    useEffect(() => {
+      window.scrollTo(0, 0); // Scroll to the top when the component mounts
+    }, []);
+
       // Using useEffect for single rendering
     useEffect(() => {
       // Using fetch to fetch the API from Flask server

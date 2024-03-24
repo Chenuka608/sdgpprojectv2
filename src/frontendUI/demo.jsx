@@ -1,7 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import backgroundImage from '../images/mic1.jpg';
 
 const InterviewDemo = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top when the component mounts
+  }, []);
+
   return (
     <div className="container mx-auto py-80 relative bg-contain" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <h1 className="text-5xl font-bold mb-4 text-[#0C024B]"> Interview Demo</h1>
