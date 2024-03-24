@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 import { HiArrowNarrowRight } from 'react-icons/hi';
 
 const Home = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleGetStarted = () => {
+    navigate('/'); // Redirect to the home page
+  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div name='home' className='w-full h-screen bg-[#0a192f]'>
       {/* Container */}
@@ -20,7 +30,7 @@ const Home = () => {
           fostering a supportive environment for growth and connection. Join us and take the first step towards a fulfilling career in technology.
         </p>
         <div>
-          <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600'>
+          <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600' onClick={handleGetStarted}>
             Get Started
             <span className='group-hover:rotate-90 duration-300'>
               <HiArrowNarrowRight className='ml-3 ' />
