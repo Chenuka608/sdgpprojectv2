@@ -12,6 +12,8 @@ from langchain.chat_models import ChatOpenAI
 # Initialize Flask app
 app = Flask(__name__)
 
+
+
 # Load documents
 directory = '/Users/shehanfernando/Downloads/sdgpprojectv2/file_data'
 loader = DirectoryLoader(directory)
@@ -28,7 +30,7 @@ embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
 db = Chroma.from_documents(docs, embeddings)
 
 # Set up language model
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 model_name = "gpt-3.5-turbo"
 llm = ChatOpenAI(model_name=model_name)
 chain = load_qa_chain(llm, chain_type="stuff", verbose=True)
