@@ -30,7 +30,7 @@ embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
 db = Chroma.from_documents(docs, embeddings)
 
 # Set up language model
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 model_name = "gpt-3.5-turbo"
 llm = ChatOpenAI(model_name=model_name)
 chain = load_qa_chain(llm, chain_type="stuff", verbose=True)
@@ -38,7 +38,7 @@ chain = load_qa_chain(llm, chain_type="stuff", verbose=True)
 # Define route to get data
 @app.route('/data')
 def get_data():
-    query = "what are oop concepts?"
+    query = "oop?"
     matching_docs = db.similarity_search(query)
     answer = chain.run(input_documents=matching_docs, question=query)
     
