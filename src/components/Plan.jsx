@@ -35,8 +35,7 @@ const Plan = () => {
       <div className='flex flex-col h-full justify-center'>
         <h3 className='text-5xl md:text-6xl font-bold'>You can Shape your own Future!</h3>
         <p className='text-2xl py-6'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
-          nam?
+        Struggling to prepare for your interviews? At Internova, we understand these challenges.
         </p>
         <p className='pb-6'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum

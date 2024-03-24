@@ -21,8 +21,7 @@ const Rooms = () => {
       <div className='lg:top-20 relative lg:col-span-1 col-span-2'>
         <h3 className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-black'}`}>OUR COURSE PROGRAMS</h3>
         <p className={`pt-4 ${darkMode ? 'text-white' : 'text-black'}`}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error ipsam
-          rerum iusto excepturi similique minus?
+        Struggling to prepare for your interviews? At Internova, we understand the challenges. That's why we offer a unique interview experience tailored just for you.
         </p>
       </div>
 
@@ -52,7 +51,7 @@ const Rooms = () => {
             <button className="bg-white text-black px-4 py-2 rounded" onClick={navigateToQuestionnaire}>Learn More</button>
         </div>
       </div>
-    </div>\
+    </div>
   </div>
   );
 };

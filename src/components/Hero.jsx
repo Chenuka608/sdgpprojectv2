@@ -26,10 +26,8 @@ const Hero = () => {
         <p className='text-4xl'>Welcome To</p>
         <h1 className="text-4xl font-bold mb-4 md:text-9xl drop-shadow-2xl">INTERNOVA</h1>
         <p className='text-lg max-w-[600px] drop-shadow-2xl py-2 text-x1 mx-auto' style={poppins}>
-          At INTERNOVA, we are committed to helping you gain new skills and knowledge 
-          with ease. Our dedicated team of instructors and wide range of courses make learning affordable, 
-          fun and accessible. Browse our site to discover what we have to offer and schedule an introductory
-           session today.
+          The Interns Innovation , Browse our site to discover what we have to offer and schedule an introductory 
+           session today .
         </p>
         <button className='bg-white text-black hover:bg-gray-300 hover:text-black transition-colors duration-300 ease-in-out  py-2 px-4 md:py-2md:px-4'>  Enroll Now</button>
       </div>
