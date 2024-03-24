@@ -9,11 +9,11 @@ const InterviewDemo = () => {
       method: 'POST',
       body: formData
     })
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById('predictionResult').innerText = 'Predicted Emotion: ' + data.predicted_emotion;
-    })
-    .catch(error => console.error('Error:', error));
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('predictionResult').innerText = 'Predicted Emotion: ' + data.predicted_emotion;
+      })
+      .catch(error => console.error('Error:', error));
   };
 
   return (
@@ -22,18 +22,18 @@ const InterviewDemo = () => {
       <div className="grid grid-cols-2 gap-8">
         {/* Audio Input Section */}
         <div>
-        <form id="uploadForm" encType="multipart/form-data" onSubmit={handleSubmit}>
-          <input type="file" name="audio" accept=".wav" />
-          <button type="submit">Predict</button>
-        </form>
-        <div id="predictionResult"></div>
+          <form id="uploadForm" encType="multipart/form-data" onSubmit={handleSubmit}>
+            <input type="file" name="audio" accept=".wav" />
+            <button type="submit">Predict</button>
+          </form>
+          <div id="predictionResult"></div>
         </div>
-        </div>
-        {/* Feedback Section */}
-        <div style={{ marginLeft: 'auto', marginLeft: '60rem' }}> {/* Adjust marginRight as needed */}
-          <h2 className="text-xl font-bold mb-2">Feedback</h2>
-          {/* Placeholder for feedback message */}
-          <p className="text-gray-600">Awaiting input....</p>
+      </div>
+      {/* Feedback Section */}
+      <div style={{ marginLeft: 'auto', marginLeft: '60rem' }}> {/* Adjust marginRight as needed */}
+        <h2 className="text-xl font-bold mb-2">Feedback</h2>
+        {/* Placeholder for feedback message */}
+        <p className="text-gray-600">Awaiting input....</p>
       </div>
     </div>
   );
