@@ -224,9 +224,9 @@ const Questionnaire = () => {
         {/* Search questionnaire starting part*/}
         <div>
         <h1 className="text-3xl md:text-5xl font-bold mb-4 text-[#0C024B]">Search Questionnaire</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="text-xl md:text-2xl font-bold mb-4">
             <div>
-              <h2 className="text-xl md:text-2xl font-bold mb-4">FullStack Develop Search Engine</h2>
+              <h2 className="text-lg md:text-xl font-semibold mb-2">FullStack Develop Search Engine</h2>
               <div>
                 <input
                   type="text"
@@ -248,7 +248,7 @@ const Questionnaire = () => {
               </textarea>
               </div>
           </div>
-          </div>
+      </div>
     </div>
 </div>
      
