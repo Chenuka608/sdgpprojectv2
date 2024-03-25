@@ -1,6 +1,7 @@
 # Import necessary modules
 import os
 from flask import Flask, jsonify
+from flask import request
 from langchain.chains import RetrievalQA
 from langchain.document_loaders import DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -30,7 +31,7 @@ embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
 db = Chroma.from_documents(docs, embeddings)
 
 # Set up language model
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 model_name = "gpt-3.5-turbo"
 llm = ChatOpenAI(model_name=model_name)
 chain = load_qa_chain(llm, chain_type="stuff", verbose=True)
@@ -38,16 +39,15 @@ chain = load_qa_chain(llm, chain_type="stuff", verbose=True)
 # Define route to get data
 @app.route('/data')
 def get_data():
-    query = "oop?"
+    query = request.args.get('query', '')
     matching_docs = db.similarity_search(query)
     answer = chain.run(input_documents=matching_docs, question=query)
     
     # Return the answer along with other data
-    return {
-        'answer': answer, 
-        "query":query,
-        
-        }
+    return jsonify(
+        {'answer': answer, 
+         'query': query
+         })
 
 # Run the app
 if __name__ == '__main__':

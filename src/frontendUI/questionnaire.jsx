@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import MainBox from './MainBox'
+import MainBox from './MainBox';
+import RAG from './RAG';
 
 const Questionnaire = () => {
   const [data, setData] = useState({
@@ -224,37 +225,10 @@ const Questionnaire = () => {
         {/* Search questionnaire starting part*/}
         <div>
         <h1 className="text-3xl md:text-5xl font-bold mb-4 text-[#0C024B]">Search Questionnaire</h1>
-          <div className="text-xl md:text-2xl font-bold mb-4">
-            <div>
-              <h2 className="text-lg md:text-xl font-semibold mb-2">FullStack Develop Search Engine</h2>
-              <div>
-                <input
-                  type="text"
-                  value={data.query}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
-                  placeholder="Search..."
-                />
-              </div>
-              <br></br>
-                <button onClick={handleSearch} className="text-sm font-semibold px-4 py-2 bg-indigo-600 text-white rounded-md disabled:opacity-50">
-                  Search
-                </button>
-              <textarea
-                id="searchInput"
-                rows="15"
-                value={data.answer}
-                className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                readOnly>
-              </textarea>
-              </div>
-          </div>
-      </div>
+        <RAG/>
+       </div>
     </div>
 </div>
-     
-  
-
-
   );
 };
 
