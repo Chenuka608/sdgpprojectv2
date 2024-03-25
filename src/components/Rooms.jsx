@@ -21,8 +21,9 @@ const Rooms = () => {
       <div className='lg:top-20 relative lg:col-span-1 col-span-2'>
         <h3 className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-black'}`}>OUR COURSE PROGRAMS</h3>
         <p className={`pt-4 ${darkMode ? 'text-white' : 'text-black'}`}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error ipsam
-          rerum iusto excepturi similique minus?
+        Our interactive demo sessions and personalized coding questionnaires streamline the evaluation process, 
+        ensuring the perfect match for your team and objectives. With Internova, interview preparation becomes a breeze,
+         paving the way for seamless integration and success.
         </p>
       </div>
 
