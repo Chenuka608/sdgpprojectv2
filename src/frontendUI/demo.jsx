@@ -5,7 +5,7 @@ const InterviewDemo = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
-    fetch('/predict', {
+    fetch('https://deploy-5vnj4kb6oq-lz.a.run.app/predict', {
       method: 'POST',
       body: formData
     })
