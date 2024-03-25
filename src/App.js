@@ -11,6 +11,7 @@ import PaymentPortal from './components/PaymentPortal.jsx';
 import Demo from './frontendUI/demo.jsx';
 import Account from './pages/Account.jsx'
 import Questionnaire from './frontendUI/questionnaire.jsx';
+import Subscription from './components/Subscription.jsx';
 
 // function App() {
 //   // useState for setting a JavaScript
@@ -86,6 +87,7 @@ function App() {
            <Route path="/demo" element={<Demo />} />
            <Route path="/questionnaire" element={<Questionnaire />} />
            <Route path="/account" element={<Account/> } /> 
+           <Route path="/subscription" element={<Subscription/> } /> 
            </Routes>
         <Footer />
       </Router>

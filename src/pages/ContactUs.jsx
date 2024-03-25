@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div name='contact' className='w-full h-screen bg-[#0a192f] flex justify-center items-center p-4'>
         <form action="https://getform.io/f/lbkmgewb" method="POST" className='flex flex-col max-w-[600px] w-full'>
