@@ -30,7 +30,7 @@ function MainBox(){
     }
 
     async function processMessageToChatGPT(chatMessages){
-        const API_KEY = "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"
+        const API_KEY = "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"
         let apiMessages = chatMessages.map((messageObject)=>{
             let role="";
             if(messageObject.sender === "Internova"){

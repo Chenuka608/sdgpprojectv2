@@ -31,7 +31,7 @@ embeddings = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
 db = Chroma.from_documents(docs, embeddings)
 
 # Set up language model
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 model_name = "gpt-3.5-turbo"
 llm = ChatOpenAI(model_name=model_name)
 chain = load_qa_chain(llm, chain_type="stuff", verbose=True)
