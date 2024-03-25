@@ -73,7 +73,7 @@ const InterviewDemo = () => {
 
   return (
     <div className="container mx-auto py-16 relative">
-      <h1 className="text-5xl font-bold mb-4 text-[#0C024B]" style={{ marginTop: '6rem',}}> Emotion Prediction</h1>
+      <h1 className="text-5xl font-bold mb-4 text-[#0C024B]" style={{ marginTop: '6rem', }}> Emotion Prediction</h1>
       {/* Question Section */}
       <div className="text-center mb-8">
         <h2 className="text-xl font-bold">{questions[currentQuestionIndex]}</h2>
