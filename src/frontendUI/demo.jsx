@@ -16,10 +16,6 @@ const InterviewDemo = () => {
       .catch(error => console.error('Error:', error));
   };
 
-  useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top when the component mounts
-  }, []);
-
   return (
     <div className="container mx-auto py-80 relative bg-contain" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <h1 className="text-5xl font-bold mb-4 text-[#0C024B]"> Emotion Prediction</h1>
