@@ -1,12 +1,9 @@
 {
+  "homepage": "http://chenuka608.github.io/sdgpprojectv2",
   "name": "sdgpprojectv2",
   "version": "0.1.0",
   "private": true,
-<<<<<<< HEAD
-  "proxy": "http://127.0.0.1.5000",
-=======
   "proxy":"http://127.0.0.1:5000",
->>>>>>> f0c669fa952092d6cb90177cd33cf27b66dcd0f9
   "dependencies": {
     "@monaco-editor/react": "^4.6.0",
     "@stripe/react-stripe-js": "^2.6.2",
