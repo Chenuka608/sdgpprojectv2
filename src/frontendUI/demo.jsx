@@ -82,6 +82,7 @@ const InterviewDemo = () => {
           <button onClick={handleNextQuestion} className="bg-gray-200 px-4 py-2 rounded-lg hover:bg-gray-300">Next</button>
         </div>
       </div>
+<<<<<<< HEAD
       {/* Video Input Section */}
       <div className="flex justify-center items-center" style={{ marginTop: '6rem', marginBottom: '4rem' }}>
         <div className="relative border border-gray-300 rounded-lg overflow-hidden">
@@ -104,6 +105,14 @@ const InterviewDemo = () => {
       </div>
       {/* Prediction Result Section */}
       <div id="predictionResult" className="text-center mt-8"></div>
+=======
+      {/* Feedback Section */}
+      <div style={{ marginLeft: 'auto', marginLeft: '60rem' }}> {/* Adjust marginRight as needed */}
+        <h2 className="text-xl font-bold mb-2">Feedback</h2>
+        {/* Placeholder for feedback message */}
+        <p className="text-gray-600">Awaiting input....</p>
+      </div>
+>>>>>>> f0c669fa952092d6cb90177cd33cf27b66dcd0f9
     </div>
   );
 };
