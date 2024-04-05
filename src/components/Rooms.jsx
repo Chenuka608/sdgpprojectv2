@@ -2,6 +2,14 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 
 const Rooms = () => {
+
+  const poppins = {
+    fontFamily: '"Poppins", sans-serif',
+  };
+  const dmSerifText = {
+    fontFamily: '"DM Serif Text", serif',
+  };
+  
   const [darkMode, setDarkMode] = useState(false);
   const navigate = useNavigate(); // Initialize useNavigate hook
 
@@ -20,7 +28,7 @@ const Rooms = () => {
     <div className={`max-w-[1400px] h-[500px] ${darkMode ? 'bg-blue-900' : 'bg-blue-100'} mx-auto my-20 pt-16 lg:mb-[20%] md:mb-[35%] px-4 grid lg:grid-cols-3 gap-4`}>
       <div className='lg:top-20 relative lg:col-span-1 col-span-2'>
         <h3 className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-black'}`}>OUR COURSE PROGRAMS</h3>
-        <p className={`pt-4 ${darkMode ? 'text-white' : 'text-black'}`}>
+        <p  className={`pt-4 ${darkMode ? 'text-white' : 'text-black'}` } style={{ ...poppins, textAlign: 'justify' }}>
         Our interactive demo sessions and personalized coding questionnaires streamline the evaluation process, 
         ensuring the perfect match for your team and objectives. With Internova, interview preparation becomes a breeze,
          paving the way for seamless integration and success.

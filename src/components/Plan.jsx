@@ -8,6 +8,10 @@ const Plan = () => {
     navigate('/subscription'); // Navigate to the subscription page
   };
 
+  const poppins = {
+    fontFamily: '"Poppins", sans-serif',
+  };
+
   return (
     <div className='max-w-[1400px] m-auto py-16 px-4 grid lg:grid-cols-2 gap-4'>
       {/* Left Side */}
@@ -41,10 +45,10 @@ const Plan = () => {
       {/* Right Side */}
       <div className='flex flex-col h-full justify-center'>
         <h3 className='text-5xl md:text-6xl font-bold'>You can Shape your own Future!</h3>
-        <p className='text-2xl py-6'>
+        <p className='text-2xl py-6' style={poppins} >
           Struggling to prepare for your interviews? At Internova, we understand these challenges.
         </p>
-        <p className='pb-6'>
+        <p className='pb-6' style={{ ...poppins, textAlign: 'justify' }}>
           That's why we've tailored a comprehensive course designed to equip you with the skills and confidence needed to ace your next interview with ease. Our program is crafted to alleviate stress and instill confidence, empowering you to tackle even the toughest interview questions with poise and precision. With personalized guidance and practical exercises, we'll help you hone your interview skills and present your best self to prospective employers. Join us at Internova and embark on your journey to interview success with confidence and ease.
         </p>
         <div>

@@ -13,7 +13,9 @@ const Home = () => {
       <Offers />
       <Plan />
       <Rooms />
-      <ImageSlider />
+      <div style={{ marginBottom: '200px' }}>
+        <ImageSlider />
+      </div>
     </div>
   );
 };
