@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  mongo_db:
+    container_name: database_container
+    image: mongo:latest
+    restart: always
+   
+
+  app:
+    build: .
+    ports:
+      - 4000:3000
+    environment:
+      PORT: 4000
+      MONGO_URI: "mongodb+srv://ranminijayawardena:mran!_12@cluster0.hhpmlok.mongodb.net/Internova"
+      JWT_SECRET_KEY: "gahg48589a45ajfjAUFAHHFIhufuu"
+    depends_on:
+      - mongo_db
+
+
