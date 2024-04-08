@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useContext } from 'react';
 import MainBox from './MainBox';
+import {useNavigate } from 'react-router-dom';
+import { AuthContext } from './../context/AuthContext';
 import RAG from './RAG';
 
 const Questionnaire = () => {
@@ -12,6 +14,19 @@ const Questionnaire = () => {
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to the top when the component mounts
   }, []);
+
+  const { user} = useContext(AuthContext);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Check if the user is logged in, if not, redirect to login page
+    if (!user) {
+      navigate('/login');
+    }
+  }, [user, navigate]);
+  
+
   // Using useEffect for single rendering
   useEffect(() => {
     // Using fetch to fetch the API from Flask server
